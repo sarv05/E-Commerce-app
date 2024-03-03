@@ -10,7 +10,7 @@ const cors=require("cors");
 app.use(express.json());
 app.use(cors(
     {
-        origin:["https://e-commerce-app-sigma-five.vercel.app/"],
+        origin:[""],
         methods:["POST","GET"],
         credentials:true
     }
