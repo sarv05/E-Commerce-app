@@ -8,9 +8,15 @@ const path=require("path");
 const cors=require("cors");
 
 app.use(express.json());
-app.use(cors());
+app.use(cors(
+    {
+        origin:["https://deploy-mern.vercel.app"],
+        methods:["POST","GET"],
+        credentials:true
+    }
+));
 
-mongoose.connect("mongodb+srv://user1:BBbsut3HiXjbPqm5@e-commerce.0grtrnv.mongodb.net/")
+mongoose.connect("mongodb+srv://sarveshdoveton2004:Ukrcc63MaQ36WHDc@e-commerce.0grtrnv.mongodb.net/", {dbName: 'e-commerce'})
     .then(() => {
         console.log("MongoDB Connected");
     })
